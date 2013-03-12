@@ -16,7 +16,7 @@ class Heroku::Command::Redis < Heroku::Command::Base
     matches = config.keys & ((args.length.zero?) ? REDIS_PROVIDERS : [args.first])
 
     case matches.length
-      when 0 then error "No redis add-on provider found"
+      when 0 then error "No redis add-on found"
       when 1 then
         uri = URI.parse(config[matches.first])
         exec "redis-cli -h #{uri.host} -p #{uri.port} -a #{uri.password}"
