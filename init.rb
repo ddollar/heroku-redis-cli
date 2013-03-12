@@ -5,7 +5,7 @@ require "uri"
 #
 class Heroku::Command::Redis < Heroku::Command::Base
 
-  REDIS_PROVIDERS = %w( OPENREDIS_URL REDISTOGO_URL )
+  REDIS_PROVIDERS = %w( OPENREDIS_URL REDISTOGO_URL REDISGREEN_URL )
 
   # redis:cli [NAME]
   #
